@@ -15,12 +15,31 @@
           },
           "to": [
             {
+              "set_notification_message": {
+                "id": "qwerty_mode_on",
+                "text": "QWERTY MODE ON"
+              }
+            },
+            {
               "set_variable": {
                 "name": "qwerty_layout",
                 "value": 1
               }
             }
           ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_notification_message": {
+                  "id": "qwerty_mode_on",
+                  "text": ""
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 500
+          },
           "conditions": [
             {
               "type": "variable_if",
@@ -40,12 +59,31 @@
           },
           "to": [
             {
+              "set_notification_message": {
+                "id": "qwerty_mode_off",
+                "text": "QWERTY MODE OFF"
+              }
+            },
+            {
               "set_variable": {
                 "name": "qwerty_layout",
                 "value": 0
               }
             }
           ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_notification_message": {
+                  "id": "qwerty_mode_off",
+                  "text": ""
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 500
+          },
           "conditions": [
             {
               "type": "variable_if",
